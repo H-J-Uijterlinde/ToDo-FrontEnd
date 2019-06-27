@@ -1,0 +1,26 @@
+.header {
+  background: #333;
+  color: #e1a823;
+  text-align: center;
+  padding: 10px;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container{
+  color: #fcf5f3;
+  background-color: #91ceff;
+}
+
+.mat-tab-link,
+.mat-tab-label {
+  color: #000000;
+  font-size: large;
+  font-weight: bold;
+}
+.a {
+  color: #e1b03a;
+}

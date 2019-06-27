@@ -1,0 +1,15 @@
+<mat-card class="test">
+  <app-add-boodschappen
+    (addBoodschap)="addBoodschap($event)">
+  </app-add-boodschappen>
+</mat-card>
+
+<mat-card>
+  <app-boodschappen-item
+    *ngFor="let boodschap of boodschappen | async"
+    [boodschap]="boodschap"
+    (deleteBoodschap)="deleteBoodschap($event)"
+    (completeBoodschap)="completeBoodschap($event)">
+  </app-boodschappen-item>
+</mat-card>
+

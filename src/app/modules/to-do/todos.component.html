@@ -1,0 +1,15 @@
+<mat-card class="test">
+  <app-add-todo
+    (addTodo)="addTodo($event)"
+  ></app-add-todo>
+</mat-card>
+
+<mat-card>
+  <app-todo-item
+    *ngFor="let todo of todos | async"
+    [todo]="todo"
+    (deleteTodo)="deleteTodo($event)"
+    (completeTodo)="completeTodo($event)"
+  >
+  </app-todo-item>
+</mat-card>

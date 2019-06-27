@@ -1,0 +1,27 @@
+.mat-raised-button {
+  float: right;
+  background-color: black;
+  color: #e1a823;
+}
+.mat-form-field {
+  float: left;
+  margin-right: 5px;
+  width: 90%
+}
+
+.mat-expansion-panel {
+  background-color: #dff3ff;
+  padding: 10px;
+}
+
+
+.mat-panel-description {
+  font-size: x-large;
+}
+
+.mat-card {
+  background-color: #fefdff;
+  padding: 15px;
+  margin-bottom: 5px;
+
+}

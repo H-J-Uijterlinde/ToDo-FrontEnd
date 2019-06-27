@@ -1,0 +1,79 @@
+<mat-card class="container">
+<mat-accordion>
+  <form
+    class="form"
+    [formGroup]="toDoForm"
+    (ngSubmit)="toDoSubmit(toDoForm.value)">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+
+      <mat-panel-title>
+        ToDoItems
+      </mat-panel-title>
+
+      <mat-panel-description>
+        Voeg een nieuw ToDoItem toe
+      </mat-panel-description>
+
+    </mat-expansion-panel-header>
+    <div *ngFor="let todo of toDos| async">
+      <mat-card *ngIf="!todo.completed">
+        {{todo.title}}
+      </mat-card>
+    </div>
+
+
+    <mat-action-row>
+      <mat-form-field>
+        <label>
+          <input matInput
+                 formControlName="title"
+                 placeholder="Nieuwe taak">
+        </label>
+      </mat-form-field>
+
+      <button
+        mat-raised-button type="submit"> toevoegen </button>
+    </mat-action-row>
+
+
+  </mat-expansion-panel>
+  </form>
+  <form
+    class="form"
+    [formGroup]="boodschapForm"
+    (ngSubmit)="boodschapSubmit(boodschapForm.value)">
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+
+      <mat-panel-title>
+        Boodschappen
+      </mat-panel-title>
+
+      <mat-panel-description>
+        Voeg boodschappen toe
+      </mat-panel-description>
+
+    </mat-expansion-panel-header>
+    <div *ngFor="let boodschap of boodschappen | async">
+      <mat-card *ngIf="!boodschap.completed">
+        {{boodschap.title}}
+      </mat-card>
+    </div>
+    <mat-action-row>
+    <mat-form-field>
+      <input matInput
+             formControlName="title"
+             placeholder="Nieuwe boodschap">
+    </mat-form-field>
+
+
+      <button mat-raised-button
+              type="submit"> Toevoegen </button>
+    </mat-action-row>
+
+  </mat-expansion-panel>
+  </form>
+</mat-accordion>
+</mat-card>

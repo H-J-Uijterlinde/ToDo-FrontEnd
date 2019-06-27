@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+}
+.mat-raised-button {
+  float: right;
+  background-color: black;
+  color: #e1a823;
+}
+.mat-form-field {
+  text-align: center;
+  background-color: #fcf5f3;
+  color: #000000;
+  float: left;
+  margin-right: 5px;
+  width: 90%
+}
+

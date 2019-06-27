@@ -1,0 +1,13 @@
+<form
+  #addToDoForm="ngForm"
+  class="form"
+  (ngSubmit)="onSubmit(); addToDoForm.reset()">
+  <mat-form-field>
+    <label>
+      <input matInput name="title" [(ngModel)]="title"
+             placeholder="Add Todo...">
+    </label>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit">Toevoegen</button>
+</form>

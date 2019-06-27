@@ -1,0 +1,19 @@
+<mat-card [ngClass]="setClasses()">
+  <p>
+    <button mat-icon-button
+            color="warn"
+            (click)="onToggle(todo)">
+      <mat-icon
+        *ngIf="todo.completed"
+        aria-label="check"
+        svgIcon="check"></mat-icon>
+      <mat-icon
+        *ngIf="!todo.completed"
+        aria-label="uncheck"
+        svgIcon="uncheck"></mat-icon>
+    </button>
+    {{ todo.title }}
+    <button (click)="onDelete(todo)" class="del">X</button>
+  </p>
+</mat-card>
+

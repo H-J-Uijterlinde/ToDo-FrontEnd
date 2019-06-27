@@ -1,0 +1,17 @@
+
+  <form
+    class="form"
+    [formGroup]="boodschapForm"
+    (ngSubmit)="onSubmit(boodschapForm.value)">
+    <mat-form-field>
+      <label>
+        <input
+          matInput
+          formControlName="title"
+          placeholder="Boodschappen toevoegen..."
+        >
+      </label>
+    </mat-form-field>
+      <button mat-raised-button type="submit">Toevoegen</button>
+
+  </form>
