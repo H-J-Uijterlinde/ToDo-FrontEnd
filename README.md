@@ -1,5 +1,10 @@
 # ChartApp
 
+This is a web application created with angular materials. It allows a user to add Todo-items and groceries. It also provides options
+to mark items as done/ not-done, and to delete. The items are stored in a database through http requests made to a restfull webservice I created. There is a seperate repository for the back end of this application. I have deployed this application on Heroku:
+
+https://sema-todolist.herokuapp.com/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
